@@ -1,8 +1,12 @@
 const http = require("http");
 const fs = require("fs");
 const server = http.createServer((req,res)=>{
+
+
    const jsondata =  fs.readFileSync("api.json","utf-8");
    const objdata = JSON.parse(jsondata);
+
+   
     if(req.url=="/about"){
         res.end("this is my first  about node js server");
 
